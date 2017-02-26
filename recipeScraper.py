@@ -57,9 +57,9 @@ for word in recipe.findAll("span", { "class" : "recipe-directions__list--item" }
 # print directions
 
 # get footnotes
-footnotes = []
-for word in recipe.findAll("section", {"class" : "recipe-footnotes"})[0].findAll("li"):
-    footnotes.append(word.get_text())
+# footnotes = []
+# for word in recipe.findAll("section", {"class" : "recipe-footnotes"})[0].findAll("li"):
+#     footnotes.append(word.get_text())
     # print word.get_text()
 # print footnotes
 

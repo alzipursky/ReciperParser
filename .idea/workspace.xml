@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="290a25f9-0b72-4bd4-aa32-688e6fa0760e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/foodList.py" afterPath="$PROJECT_DIR$/foodList.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protein.py" afterPath="$PROJECT_DIR$/protein.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recipeScraper.py" afterPath="$PROJECT_DIR$/recipeScraper.py" />
     </list>
     <ignored path="RecipeParser.iws" />
@@ -27,8 +29,28 @@
       <file leaf-file-name="recipeScraper.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recipeScraper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22779922">
-              <caret line="97" column="86" selection-start-line="97" selection-start-column="86" selection-end-line="97" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.2084942">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="2" selection-end-line="61" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="protein.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protein.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="foodList.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/foodList.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -53,6 +75,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ingredient.py" />
+        <option value="$PROJECT_DIR$/protein.py" />
+        <option value="$PROJECT_DIR$/foodList.py" />
         <option value="$PROJECT_DIR$/recipeScraper.py" />
       </list>
     </option>
@@ -361,10 +385,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/protein.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/foodList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recipeScraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22779922">
-          <caret line="97" column="86" selection-start-line="97" selection-start-column="86" selection-end-line="97" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.2084942">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="2" selection-end-line="61" selection-end-column="39" />
           <folding />
         </state>
       </provider>
