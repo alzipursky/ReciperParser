@@ -14,29 +14,50 @@ res.raise_for_status()
 recipe = bs4.BeautifulSoup(res.text,"html.parser")
 
 # get the title
+title = []
 for word in recipe.findAll("h1", {"class" : "recipe-summary__h1"}):
-    print word.get_text()
+    title.append(word.get_text())
+    # print word.get_text()
+print title
 
 # get ingredients --->>> there's extra stuff on the end we don't want
+ingredients = []
 for word in recipe.findAll("span", { "class" : "recipe-ingred_txt" }):
-    print word.get_text()
+    ingredients.append(word.get_text())
+    # print word.get_text()
+print ingredients
 
 # get prep time
+prepTime = []
 for word in recipe.findAll("time", { "itemprop" : "prepTime" }):
-    print word.get_text()
+    prepTime.append(word.get_text())
+    # print word.get_text()
+print prepTime
 
 # get cook time
+cookTime = []
 for word in recipe.findAll("time", { "itemprop" : "cookTime" }):
-    print word.get_text()
+    cookTime.append(word.get_text())
+    # print word.get_text()
+print cookTime
 
 # get total time
+totalTime = []
 for word in recipe.findAll("time", { "itemprop" : "totalTime" }):
-    print word.get_text()
+    totalTime.append(word.get_text())
+    # print word.get_text()
+print totalTime
 
 # get directions
+directions = []
 for word in recipe.findAll("span", { "class" : "recipe-directions__list--item" }):
-    print word.get_text()
+    directions.append(word.get_text())
+    # print word.get_text()
+print directions
 
 # get footnotes
+footnotes = []
 for word in recipe.findAll("section", {"class" : "recipe-footnotes"})[0].findAll("li"):
-    print word.get_text()
+    footnotes.append(word.get_text())
+    # print word.get_text()
+print footnotes
