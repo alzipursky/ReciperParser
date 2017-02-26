@@ -95,7 +95,7 @@ sup_methods = ['chop','grate','stir', 'shake', 'mince', 'crush', 'squeeze','spri
                'seed','mix','grind','ground','dry','cure','grease','degrease','dredge','dehydrate','dried','brush',
                'fold','cut','stuff','ferment','flambe','foam','can','paste','steep','infuse','dissolve','juice',
                'marinate','soak','pasteurize','pickle','puree','pure','reduce','reduction','separate','shir',
-               'smother','sous-vide','thicken','devein','glaze','frozen','chill']
+               'smother','sous-vide','thicken','devein','glaze','frozen','chill','mash']
 
 variations = []
 for each in sup_methods:
