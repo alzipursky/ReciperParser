@@ -1,7 +1,7 @@
 import requests, bs4
 import string
 
-recipeUrl = 'http://allrecipes.com/recipe/220128/chef-johns-buttermilk-fried-chicken/'
+recipeUrl = 'http://allrecipes.com/recipe/24193/margarita-chicken-ii/?internalSource=previously%20viewed&referringContentType=home%20page&clickId=cardslot%2038'
 
 # get webpage
 res = requests.get(recipeUrl)

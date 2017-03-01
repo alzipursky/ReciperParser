@@ -3,8 +3,7 @@ healthyIngredientsMap = {'sugar': 'stevia', 'salt': 'sea-salt', 'whole milk': 'r
                          'all-purpose flour': 'whole wheat flour', 'ground beef': 'extra lean ground beef',
                          'dressing': 'vinegar', 'palm oil': 'olive oil', 'coconut oil': 'olive oil',
                          'vegetable oil': 'olive oil', 'bread crumbs': 'ground flaxseeds', 'white rice': 'brown rice',
-                         'pasta': 'whole wheat pasta',}
+                         'pasta': 'whole wheat pasta', 'kosher salt': 'sea-salt', 'spaghetti': 'whole wheat pasta'}
 
 cookingTools = ['pan', 'grater', 'whisk', 'tong', 'spatula', 'knife', 'oven', 'microwave', 'skillet', 'saucepan', 'pot',
-                'bowl', 'plate'
-    , 'baking sheet', 'stovetop']
+                'bowl', 'plate', 'baking sheet', 'stovetop']
