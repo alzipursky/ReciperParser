@@ -16,4 +16,11 @@ asianToItalian = {}
 
 americanToMiddleEastern = {}
 
-mexicanToSoulFood = {}
+mexicanToSoulFood = {'avocado': 'sweet potato', 'beans': 'black eyed peas', 'salsa': 'gravy',
+                     'hot sauce': 'barbecue sauce', 'chili pepper': 'cayenne pepper', 'maize': 'corn',
+                     'tortilla': 'cornbread',
+                     'rice': 'grits', 'chicken': 'pork', 'lettuce': 'collard greens', 'chorizo': 'sausage',
+                     'tequila': 'bourbon', 'crema': 'sour cream', 'tomatillo': 'tomato', 'nopales': 'okra',
+                     'poblanos': 'cayenne peppers', 'chipotle': 'cayenne pepper', 'steak': 'brisket',
+                     'carne asada': 'chicken fried steak',
+                     'guacamole': 'gravy', 'shrimp': 'crawfish', 'crab': 'crawfish', 'squash': 'sweet potato'}
