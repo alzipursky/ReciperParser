@@ -21,6 +21,8 @@ for word in recipe.findAll("span", { "class" : "recipe-directions__list--item" }
     directions.append(word.get_text())
     # print word.get_text()
 
+directions = [each.split('.')[0] for each in directions]
+
 # list of methods
 main_methods = ['saute','sautee','broil','boil','poach','grill','pan-fry','pan fry','stir-fry','stir fry','cook','deep-fry','deep fry','roast','bake','sear','simmer','steam','blanch','braise','stew','chill','freeze','refrigerate','toast','heat','fry','caramelize','charbroil','glaze','deglaze','microwave','nuke','frozen']
 
