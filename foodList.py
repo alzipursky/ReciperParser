@@ -12,7 +12,18 @@ frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallots': 'garlic', '
                   'herbes de provence': 'garam masala', 'butter': 'mustard oil', 'olive oil': 'mustard oil',
                   'fleur de sel': 'coriander'}
 
-asianToItalian = {}
+chineseToItalian = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
+                    'cheese': 'tofu', 'alfredo sauce': 'soy sauce', 'macaroni': 'lo mein noodles',
+                    'green bell pepper': 'bok choy', 'italian': 'chinese', 'bread': 'rice',
+                    'olive oil': 'vegetable oil',
+                    'tomato': 'dried chilli peppers', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
+
+italianToChinese = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy sauce': 'tomato sauce',
+                    'sesame oil': 'olive oil',
+                    'ginger': 'parsley', 'bok choy': 'green bell pepper', 'hot chile paste': 'tomato sauce',
+                    'chinese': 'italian',
+                    'hoisin sauce': 'tomato sauce', 'five-spice powder': 'black pepper', 'rice vinegar': 'olive oil',
+                    'oyster sauce': 'tomato sauce', 'asian': 'italian'}
 
 americanToMiddleEastern = {}
 
@@ -23,4 +34,5 @@ mexicanToSoulFood = {'avocado': 'sweet potato', 'beans': 'black eyed peas', 'sal
                      'tequila': 'bourbon', 'crema': 'sour cream', 'tomatillo': 'tomato', 'nopales': 'okra',
                      'poblanos': 'cayenne peppers', 'chipotle': 'cayenne pepper', 'steak': 'brisket',
                      'carne asada': 'chicken fried steak',
-                     'guacamole': 'gravy', 'shrimp': 'crawfish', 'crab': 'crawfish', 'squash': 'sweet potato'}
+                     'guacamole': 'gravy', 'shrimp': 'crawfish', 'crab': 'crawfish', 'squash': 'sweet potato',
+                     'cabbage': 'collard greens'}
