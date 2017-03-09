@@ -24,7 +24,7 @@ class Ingredient:
 
         print
 
-    def addPreparation(self,preparation):
+    def addPreparation(self, preparation):
         self.preparation.append(preparation)
 
     def addDescriptor(self, descriptor):
@@ -42,6 +42,6 @@ class Ingredient:
     def clearDescriptor(self):
         self.descriptor = []
 
-    def rename(self,newName):
+    def rename(self, newName):
         self.name = []
         self.name.append(newName)
