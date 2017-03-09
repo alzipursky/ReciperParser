@@ -11,7 +11,7 @@ def find_sub_list(sl,l):
     return results
 
 if len(sys.argv) != 3:
-    print "usage: python main.py <url of recipe in single quotes>"
+    print "usage: python main.py [url of recipe in single quotes] [transformation]"
     quit()
 
 args = sys.argv
@@ -143,6 +143,83 @@ for ing in ingredients:
 # for i in ingredientObjects:
 #     i.displayIngredient()
 
+###################
+# parse directions
+###################
+
+# list of methods
+main_methods = ['saute','sautee','broil','boil','poach','grill','pan-fry','pan fry','stir-fry','stir fry','cook','deep-fry','deep fry','roast','bake','sear','simmer','steam','blanch','braise','stew','chill','freeze','refrigerate','toast','heat','fry','caramelize','charbroil','glaze','deglaze','microwave','nuke','frozen']
+
+sup_methods = ['chop','grate','stir', 'shake', 'mince', 'crush', 'squeeze','mash','sprinkle'
+        ,'season','dissolve','peel','seed','mix','grind','ground','dry','cure','grease','degrease'
+        ,'dredge','dehydrate','dried','brush','fold','cut','stuff','ferment','flambe','foam','can'
+        ,'paste','steep','infuse','dissolve','juice','marinate','soak','pasteurize','pickle'
+        ,'puree','pure','reduce','reduction','separate','shir','smother','sous-vide','thicken','devein'
+        ,'smash','tenderise','pit','slice','zest','spread','line','bread','toss','coat']
+
+variations = []
+for each in sup_methods:
+    variations.extend([each+'d',each+'ed',each+each[-1]+'ed',each+'ing',each+each[-1]+'ing',each[:-1]+'ing'])
+sup_methods = sup_methods + variations
+
+variations_main = []
+for each in main_methods:
+    variations_main.extend([each+'d',each+'ed',each+each[-1]+'ed',each+'ing',each+each[-1]+'ing',each[:-1]+'ing'])
+main_methods = main_methods + variations_main
+
+cookingTools = ['pan','grater','rack','whisk','paper towel','tong','spatula','knife','oven','microwave','skillet','saucepan','pot','bowl','plate'
+                ,'baking sheet','stovetop','knife','colander','strainer','aluminum foil','rolling pin','ladle','peeler','pastry bag'
+                ,'blender','food processor','juicer','wok','dutch oven','convection oven','parchment paper','kettle','sheet pan'
+                ,'brush','skewer','ricer','refrigerator','freezer','grill','press','torch','tray','pitter','slicer'
+                ,'thermometer','scale','chopper','tenderiser','zester','slow cooker','baking dish','dish']
+tools = []
+for each in cookingTools:
+    tools.extend([each+'s',each+'es'])
+cookingTools = cookingTools + tools
+
+ingredients_full = [x.split() for x in ingredients]
+
+steps = {}
+
+for i in range(len(directions)):
+    steps[i+1] = {}
+    for j in ingredients_full:
+        for word in j[2:]:
+            if word in directions[i].lower():
+                if 'ingredients' in steps[i+1]:
+                    if word not in steps[i+1]['ingredients']:
+                        steps[i+1]['ingredients'].append(word)
+                else:
+                    steps[i+1]['ingredients'] = [word]
+    for method in main_methods:
+        if method in directions[i].lower():
+            print directions[i]
+            if 'methods' in steps[i+1]:
+                if method not in steps[i+1]['methods']:
+                    steps[i+1]['methods'].append(method)
+            else:
+                steps[i+1]['methods'] = [method]
+    for method in sup_methods:
+        if method in directions[i].lower():
+            if 'prep_methods' in steps[i+1]:
+                if method not in steps[i+1]['prep_methods']:
+                    steps[i+1]['prep_methods'].append(method)
+            else:
+                steps[i+1]['prep_methods'] = [method]
+    for tool in cookingTools:
+        if tool in directions[i].lower():
+            if 'tools' in steps[i+1]:
+                if tool not in steps[i+1]['tools']:
+                    steps[i+1]['tools'].append(tool)
+            else:
+                steps[i+1]['tools'] = [tool]
+
+# for key, value in steps.items():
+#     print "Step ", key,
+#     for k in value:
+#         print " ",k,
+#         for v in value[k]:
+#             print v
 
 if transformation == 'vegetarian':
     meats = protein.meat_to_veg.keys()
@@ -198,7 +275,7 @@ if transformation == 'vegetarian':
             print word,
         print
 
-if transformation == 'meatify':
+elif transformation == 'meatify':
     meats = protein.meat_to_veg.keys()
 
     vegetarian_meats = {}
@@ -257,7 +334,7 @@ if transformation == 'meatify':
             print word,
         print
 
-if transformation == 'healthy':
+elif transformation == 'healthy':
     health_foods = foodList.healthyIngredientsMap.keys()
     health_foods_used = []
     for ing in ingredientObjects:
@@ -319,7 +396,7 @@ if transformation == 'healthy':
     for direction in newDirections:
         print direction
 
-if transformation == 'unhealthy':
+elif transformation == 'unhealthy':
     health_foods = foodList.healthyIngredientsMap.keys()  # <<<--- naming conventions backwards?
 
     unhealthy_foods = {}
@@ -371,6 +448,89 @@ if transformation == 'unhealthy':
                 d = d.split()
                 locations = find_sub_list(mList, d)
                 newWord = unhealthy_foods[m]
+                for loc in locations:
+                    for i in range(loc[1] - loc[0] + 1):
+                        if i == 0:
+                            d[loc[0] + i] = newWord
+                        else:
+                            d[loc[0] + 1] = ""
+                d = ' '.join(d)
+        newDirections.append(d)
+
+    for ing in ingredientObjects:
+        ing.displayIngredient()
+
+    for direction in newDirections:
+        print direction
+else:
+    cuisine_dict = {}
+    if transformation == 'asian_to_italian':
+        cuisine_dict = foodList.asianToItalian
+    elif transformation == 'italian_to_asian':
+        for asian_food in foodList.asianToItalian.keys():
+            cuisine_dict[foodList.asianToItalian[asian_food]] = asian_food
+    elif transformation == 'american_to_middle_eastern':
+        cuisine_dict = foodList.americanToMiddleEastern
+    elif transformation == 'middle_eastern_to_american':
+        for american_food in foodList.americanToMiddleEastern.keys():
+            cuisine_dict[foodList.americanToMiddleEastern[american_food]] = american_food
+    elif transformation == 'mexican_to_soul_food':
+        cuisine_dict = foodList.mexicanToSoulFood
+    elif transformation == 'soul_food_to_mexican':
+        for mexican_food in foodList.mexicanToSoulFood.keys():
+            cuisine_dict[foodList.mexicanToSoulFood[mexican_food]] = mexican_food
+    elif transformation == 'french_to_indian':
+        cuisine_dict = foodList.frenchToIndian
+    elif transformation == 'indian_to_french':
+        for indian_food in foodList.frenchToIndian.keys():
+            cuisine_dict[foodList.frenchToIndian[indian_food]] = indian_food
+
+    cuisine_foods = cuisine_dict.keys()
+    cuisine_foods_used = []
+    for ing in ingredientObjects:
+        for cuisine_food in cuisine_foods:
+            if cuisine_food in ' '.join(getattr(ing, "name")):
+                cuisine_foods_used.append(cuisine_food)
+                break
+
+    print "cuisine foods used", cuisine_foods_used
+
+    for ing in range(len(ingredientObjects)):
+        i = getattr(ingredientObjects[ing], "name")
+        i = [x.strip(',.()') for x in i]
+        i = ' '.join(i)
+        newName = None
+        for m in cuisine_foods_used:
+            if m in i:
+                mList = m.split()
+                i = i.split()
+                locations = find_sub_list(mList, i)
+                newName = cuisine_dict[m]
+                for loc in locations:
+                    for j in range(loc[1] - loc[0] + 1):
+                        if j == 0:
+                            i[loc[0] + j] = newName
+                        else:
+                            i[loc[0] + 1] = ""
+                i = ' '.join(i)
+        if newName is not None:
+            # ingredientObjects[ing].rename(newName)
+            ingredientObjects[ing].rename(i)
+            ingredientObjects[ing].clearPreparation()
+            ingredientObjects[ing].clearDescriptor()
+
+    newDirections = []
+
+    for direction in directions:
+        d = direction.split()
+        d = [x.strip(',.()') for x in d]
+        d = ' '.join(d)
+        for m in cuisine_foods_used:
+            if m in d:
+                mList = m.split()
+                d = d.split()
+                locations = find_sub_list(mList, d)
+                newWord = cuisine_dict[m]
                 for loc in locations:
                     for i in range(loc[1] - loc[0] + 1):
                         if i == 0:
