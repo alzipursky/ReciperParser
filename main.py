@@ -11,7 +11,7 @@ def find_sub_list(sl,l):
     return results
 
 if len(sys.argv) != 3:
-    print "usage: python recipeScraper.py <url of recipe in single quotes>"
+    print "usage: python main.py <url of recipe in single quotes>"
     quit()
 
 args = sys.argv
@@ -198,6 +198,65 @@ if transformation == 'vegetarian':
             print word,
         print
 
+if transformation == 'meatify':
+    meats = protein.meat_to_veg.keys()
+
+    vegetarian_meats = {}
+    for meat in meats:
+        vegetarian_meats[protein.meat_to_veg[meat]] = meat
+
+    vegetarian_meats_used = []
+    for ing in ingredientObjects:
+        for meat in vegetarian_meats:
+            if meat in getattr(ing, "name") or meat+'s' in getattr(ing,"name") or meat+'es' in getattr(ing,"name"):
+                vegetarian_meats_used.append(meat)
+                vegetarian_meats_used.append(meat+'s')
+                vegetarian_meats_used.append(meat+'es')
+
+    for ing in range(len(ingredientObjects)):
+        i = getattr(ingredientObjects[ing], "name")
+        newName = None
+        for word in range(len(i)):
+            for m in vegetarian_meats_used:
+                if i[word].strip(',.()') == m:
+                    if m[-1] == 's' and m[-2] == 'e':
+                        newName = vegetarian_meats[m[:-2]]
+                    elif m[-1] == 's':
+                        newName = vegetarian_meats[m[:-1]]
+                    else:
+                        newName = vegetarian_meats[m]
+        if newName is not None:
+            if newName in protein.veg_quantities.keys(): # <<<--- this needs to be fixed
+                setattr(ingredientObjects[ing], "quantity", [protein.veg_quantities[newName]])
+                setattr(ingredientObjects[ing], "measurement", "oz")
+            ingredientObjects[ing].rename(newName)
+            ingredientObjects[ing].clearPreparation()
+            ingredientObjects[ing].clearDescriptor()
+
+    newDirections = []
+
+    for direction in directions:
+        d = direction.split()
+        for word in range(len(d)):
+            for m in vegetarian_meats_used:
+                if d[word].strip(',.()') == m or d[word].strip(',.()') == 'meat':
+                    if m[-1] == 's' and m[-2] == 'e':
+                        d[word] = vegetarian_meats[m[:-2]]
+                    elif m[-1] == 's':
+                        d[word] = vegetarian_meats[m[:-1]]
+                    else:
+                        d[word] = vegetarian_meats[m]
+        d = [x for x in d if x not in protein.meat_parts] # <<<--- probably isnt necessary
+        newDirections.append(d)
+
+    for ing in ingredientObjects:
+        ing.displayIngredient()
+
+    for direction in newDirections:
+        for word in direction:
+            print word,
+        print
+
 if transformation == 'healthy':
     health_foods = foodList.healthyIngredientsMap.keys()
     health_foods_used = []
@@ -245,6 +304,73 @@ if transformation == 'healthy':
                 d = d.split()
                 locations = find_sub_list(mList, d)
                 newWord = foodList.healthyIngredientsMap[m]
+                for loc in locations:
+                    for i in range(loc[1] - loc[0] + 1):
+                        if i == 0:
+                            d[loc[0] + i] = newWord
+                        else:
+                            d[loc[0] + 1] = ""
+                d = ' '.join(d)
+        newDirections.append(d)
+
+    for ing in ingredientObjects:
+        ing.displayIngredient()
+
+    for direction in newDirections:
+        print direction
+
+if transformation == 'unhealthy':
+    health_foods = foodList.healthyIngredientsMap.keys()  # <<<--- naming conventions backwards?
+
+    unhealthy_foods = {}
+    for health_food in health_foods:
+        unhealthy_foods[foodList.healthyIngredientsMap[health_food]] = health_food
+
+    unhealthy_foods_used = []
+    for ing in ingredientObjects:
+        for unhealthy_food in unhealthy_foods:
+            if unhealthy_food in ' '.join(getattr(ing, "name")):
+                unhealthy_foods_used.append(unhealthy_food)
+                break
+
+    print "health foods used", unhealthy_foods_used
+
+    for ing in range(len(ingredientObjects)):
+        i = getattr(ingredientObjects[ing], "name")
+        i = [x.strip(',.()') for x in i]
+        i = ' '.join(i)
+        newName = None
+        for m in unhealthy_foods_used:
+            if m in i:
+                mList = m.split()
+                i = i.split()
+                locations = find_sub_list(mList, i)
+                newName = unhealthy_foods[m]
+                for loc in locations:
+                    for j in range(loc[1] - loc[0] + 1):
+                        if j == 0:
+                            i[loc[0] + j] = newName
+                        else:
+                            i[loc[0] + 1] = ""
+                i = ' '.join(i)
+        if newName is not None:
+            # ingredientObjects[ing].rename(newName)
+            ingredientObjects[ing].rename(i)
+            ingredientObjects[ing].clearPreparation()
+            ingredientObjects[ing].clearDescriptor()
+
+    newDirections = []
+
+    for direction in directions:
+        d = direction.split()
+        d = [x.strip(',.()') for x in d]
+        d = ' '.join(d)
+        for m in unhealthy_foods_used:
+            if m in d:
+                mList = m.split()
+                d = d.split()
+                locations = find_sub_list(mList, d)
+                newWord = unhealthy_foods[m]
                 for loc in locations:
                     for i in range(loc[1] - loc[0] + 1):
                         if i == 0:
