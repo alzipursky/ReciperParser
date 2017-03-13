@@ -8,7 +8,7 @@ healthyIngredientsMap = {'sugar': 'stevia', 'salt': 'sea-salt', 'whole milk': 'r
 cookingTools = ['pan', 'grater', 'whisk', 'tong', 'spatula', 'knife', 'oven', 'microwave', 'skillet', 'saucepan', 'pot',
                 'bowl', 'plate', 'baking sheet', 'stovetop']
 
-frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallot': 'garlic', 'tarragon': 'cardamom',
+frenchToIndian = {'cheese': 'paneer', 'leek': 'onion', 'shallot': 'garlic', 'tarragon': 'cardamom',
                   'herbes de provence': 'garam masala', 'butter': 'mustard oil', 'olive oil': 'mustard oil',
                   'fleur de sel': 'coriander', 'duck': 'chicken', 'bread': 'naan', 'baguette': 'naan',
                   'mustard': 'curry'}
