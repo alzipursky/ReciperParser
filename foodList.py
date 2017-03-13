@@ -19,9 +19,9 @@ italianToChinese = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
                     'olive oil': 'vegetable oil', 'tomato sauce': 'soy sauce',
                     'tomato': 'dried chilli peppers', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
 
-chineseToItalian = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy': 'tomato sauce',
+chineseToItalian = {'rice': 'risotto', 'vegetable oil': 'olive oil', 'soy': 'tomato sauce',
                     'sesame oil': 'olive oil',
-                    'ginger': 'parsley', 'bok': 'green bell pepper', 'hot chile paste': 'tomato sauce',
+                    'ginger': 'parsley', 'bokchoy': 'green bell pepper', 'hot chile paste': 'tomato sauce',
                     'chinese': 'italian',
                     'hoisin': 'tomato sauce', 'five-spice powder': 'black pepper', 'rice vinegar': 'olive oil',
                     'oyster': 'tomato sauce', 'asian': 'italian'}
