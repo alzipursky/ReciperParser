@@ -12,13 +12,13 @@ frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallots': 'garlic', '
                   'herbes de provence': 'garam masala', 'butter': 'mustard oil', 'olive oil': 'mustard oil',
                   'fleur de sel': 'coriander'}
 
-chineseToItalian = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
+italianToChinese = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
                     'cheese': 'tofu', 'alfredo sauce': 'soy sauce', 'macaroni': 'lo mein noodles',
                     'green bell pepper': 'bok choy', 'italian': 'chinese', 'bread': 'rice',
                     'olive oil': 'vegetable oil',
                     'tomato': 'dried chilli peppers', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
 
-italianToChinese = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy sauce': 'tomato sauce',
+chineseToItalian = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy sauce': 'tomato sauce',
                     'sesame oil': 'olive oil',
                     'ginger': 'parsley', 'bok choy': 'green bell pepper', 'hot chile paste': 'tomato sauce',
                     'chinese': 'italian',
