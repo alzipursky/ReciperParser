@@ -9,4 +9,4 @@ veg_to_meat = {'tofu': 'chicken', 'tempeh': 'fish', 'seitan': 'beef', 'jackfruit
                'lentils': 'ground beef',
                'bean': 'ground beef', 'legume': 'beef', 'tvp': 'ground beef'}
 
-meat_parts = ['breast', 'breasts', 'thigh', 'thighs']
+meat_parts = ['breast', 'breasts', 'thigh', 'thighs', 'shoulder', 'shoulder']
