@@ -2,7 +2,7 @@ healthyIngredientsMap = {'sugar': 'stevia', 'salt': 'sea-salt', 'whole milk': 'r
                          'mayo': 'sour cream', 'mayonnaise': 'sour cream', 'bacon': 'turkey bacon',
                          'all-purpose flour': 'whole wheat flour', 'ground beef': 'extra lean ground beef',
                          'dressing': 'vinegar', 'palm oil': 'olive oil', 'coconut oil': 'olive oil',
-                         'vegetable oil': 'olive oil', 'bread crumbs': 'ground flaxseeds', 'white rice': 'brown rice',
+                         'vegetable oil': 'olive oil', 'bread crumb': 'ground flaxseed', 'white rice': 'brown rice',
                          'pasta': 'whole wheat pasta', 'kosher salt': 'sea-salt', 'spaghetti': 'whole wheat pasta'}
 
 cookingTools = ['pan', 'grater', 'whisk', 'tong', 'spatula', 'knife', 'oven', 'microwave', 'skillet', 'saucepan', 'pot',
@@ -17,7 +17,7 @@ italianToChinese = {'pasta': 'lo mein noodle', 'spaghetti': 'lo mein noodle',
                     'cheese': 'tofu', 'Alfredo': 'soy sauce', 'macaroni': 'lo mein noodle',
                     'green bell pepper': 'bok choy', 'italian': 'chinese', 'bread': 'rice',
                     'olive oil': 'vegetable oil', 'tomato sauce': 'soy sauce',
-                    'tomato': 'dried chilli pepper', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
+                    'tomato': 'dried chilli pepper', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumb': 'rice'}
 
 chineseToItalian = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy sauce': 'tomato sauce',
                     'sesame oil': 'olive oil',
