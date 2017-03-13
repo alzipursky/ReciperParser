@@ -14,7 +14,7 @@ frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallots': 'garlic', '
                   'mustard': 'curry'}
 
 italianToChinese = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
-                    'cheese': 'tofu', 'alfredo sauce': 'soy sauce', 'macaroni': 'lo mein noodles',
+                    'cheese': 'tofu', 'Alfredo': 'soy sauce', 'macaroni': 'lo mein noodles',
                     'green bell pepper': 'bok choy', 'italian': 'chinese', 'bread': 'rice',
                     'olive oil': 'vegetable oil', 'tomato sauce': 'soy sauce',
                     'tomato': 'dried chilli peppers', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
@@ -23,8 +23,8 @@ chineseToItalian = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy sauce': 
                     'sesame oil': 'olive oil',
                     'ginger': 'parsley', 'bok choy': 'green bell pepper', 'hot chile paste': 'tomato sauce',
                     'chinese': 'italian',
-                    'hoisin sauce': 'tomato sauce', 'five-spice powder': 'black pepper', 'rice vinegar': 'olive oil',
-                    'oyster sauce': 'tomato sauce', 'asian': 'italian'}
+                    'hoisin': 'tomato sauce', 'five-spice powder': 'black pepper', 'rice vinegar': 'olive oil',
+                    'oyster': 'tomato sauce', 'asian': 'italian'}
 
 americanToMiddleEastern = {'bacon': 'lamb bacon', 'pork': 'lamb', 'ham': 'lamb ham',
                            'bacon grease': 'olive oil', 'canola oil': 'olive oil', 'vegetable oil': 'olive oil',
