@@ -8,16 +8,16 @@ healthyIngredientsMap = {'sugar': 'stevia', 'salt': 'sea-salt', 'whole milk': 'r
 cookingTools = ['pan', 'grater', 'whisk', 'tong', 'spatula', 'knife', 'oven', 'microwave', 'skillet', 'saucepan', 'pot',
                 'bowl', 'plate', 'baking sheet', 'stovetop']
 
-frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallots': 'garlic', 'tarragon': 'cardamom',
+frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallot': 'garlic', 'tarragon': 'cardamom',
                   'herbes de provence': 'garam masala', 'butter': 'mustard oil', 'olive oil': 'mustard oil',
                   'fleur de sel': 'coriander', 'duck': 'chicken', 'bread': 'naan', 'baguette': 'naan',
                   'mustard': 'curry'}
 
-italianToChinese = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
-                    'cheese': 'tofu', 'Alfredo': 'soy sauce', 'macaroni': 'lo mein noodles',
+italianToChinese = {'pasta': 'lo mein noodle', 'spaghetti': 'lo mein noodle',
+                    'cheese': 'tofu', 'Alfredo': 'soy sauce', 'macaroni': 'lo mein noodle',
                     'green bell pepper': 'bok choy', 'italian': 'chinese', 'bread': 'rice',
                     'olive oil': 'vegetable oil', 'tomato sauce': 'soy sauce',
-                    'tomato': 'dried chilli peppers', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
+                    'tomato': 'dried chilli pepper', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
 
 chineseToItalian = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy sauce': 'tomato sauce',
                     'sesame oil': 'olive oil',
@@ -39,34 +39,34 @@ americanToMiddleEastern = {'bacon': 'lamb bacon', 'pork': 'lamb', 'ham': 'lamb h
                            'molasse': 'honey', 'syrup': 'honey', 'mustard': 'cumin', 'worcestershire sause': 'tahini',
                            'brown sugar': 'honey', 'powdered sugar': 'honey', 'granulated sugar': 'honey',
                            'hot sauce': 'tahini', 'hot pepper sauce': 'tahini', 'bratwurst': 'lamb sausage',
-                           'grits': 'rice', 'white sugar': 'honey', 'cornmeal': 'chickpea flour',
+                           'grit': 'rice', 'white sugar': 'honey', 'cornmeal': 'chickpea flour',
                            'oatmeal': 'rice', 'bread': 'pita bread', 'squash': 'cucumber', 'zucchini': 'cucumber',
                            'pickle': 'olive', 'bell pepper': 'cucumber', 'shrimp': 'beef', 'whipping cream': 'honey',
                            'whipped cream': 'honey', 'heavy cream': 'whole milk', 'green onion': 'coriander',
                            'corn flour': 'wheat flour', 'cornmeal': 'rice', 'chocolate chips': 'mixed nuts',
                            'hamburger bun': 'pita bread', 'hotdog bun': 'pita bread', 'sour cream': 'coconut cream',
-                           'celery': 'okra', 'crackers': 'pita chips', 'maple syrup': 'honey',
+                           'celery': 'okra', 'cracker': 'pita chip', 'maple syrup': 'honey',
                            'soy sauce': 'sesame oil',
                            'coleslaw mix': 'cucumber tomato mix', 'salad dressing': 'sesami oil',
-                           'poppy seeds': 'cumin',
+                           'poppy seed': 'cumin',
                            'half-and-half': 'goatmilk', 'sweet potato': 'carrot', 'pie crust': 'baklava crust',
                            'cooking sherry': 'nutmeg', 'linguine pasta': 'couscous', 'spaghetti': 'couscous',
                            'cookie dough': 'phyllo dough', 'basil': 'thyme', 'asparagus': 'okra',
                            'balsamic vinegar': 'sumac',
                            'andoille sausage': 'lamb sausage', 'cilantro': 'coriander', 'salsa': 'hummus',
-                           'bay leaves': 'cinnamon', 'kidney bean': 'black bean', 'garbanzo bean': 'chickpea',
+                           'bay leave': 'cinnamon', 'kidney bean': 'black bean', 'garbanzo bean': 'chickpea',
                            'bread dough': 'phyllo dough', 'italian sausage': 'beef kebab', 'fennel seed': 'cinnamon',
                            'oats': 'mujadara pilaf', 'steak': 'shish kabob', 'pizza dough': 'pita bread dough',
                            'house salad': 'tabouli salad', 'salsa dip': 'tabouli salad',
                            'ricotta cheese': 'feta cheese',
-                           'enchilada sauce': 'hummus'}
+                           'enchilada sauce': 'hummus', 'bbq sauce': 'hummu'}
 
-mexicanToSoulFood = {'avocado': 'sweet potato', 'beans': 'black eyed peas', 'salsa': 'gravy',
+mexicanToSoulFood = {'avocado': 'sweet potato', 'bean': 'black eyed pea', 'salsa': 'gravy',
                      'hot sauce': 'barbecue sauce', 'chili pepper': 'cayenne pepper', 'maize': 'corn',
                      'tortilla': 'cornbread',
-                     'rice': 'grits', 'chicken': 'pork', 'lettuce': 'collard greens', 'chorizo': 'sausage',
-                     'tequila': 'bourbon', 'crema': 'sour cream', 'tomatillo': 'tomato', 'nopales': 'okra',
-                     'poblanos': 'cayenne peppers', 'chipotle': 'cayenne pepper', 'steak': 'brisket',
+                     'rice': 'grit', 'chicken': 'pork', 'lettuce': 'collard green', 'chorizo': 'sausage',
+                     'tequila': 'bourbon', 'crema': 'sour cream', 'tomatillo': 'tomato', 'nopale': 'okra',
+                     'poblano': 'cayenne pepper', 'chipotle': 'cayenne pepper', 'steak': 'brisket',
                      'carne asada': 'chicken fried steak',
                      'guacamole': 'gravy', 'shrimp': 'crawfish', 'crab': 'crawfish', 'squash': 'sweet potato',
-                     'cabbage': 'collard greens'}
+                     'cabbage': 'collard green'}
