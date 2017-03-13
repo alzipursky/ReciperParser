@@ -10,7 +10,8 @@ cookingTools = ['pan', 'grater', 'whisk', 'tong', 'spatula', 'knife', 'oven', 'm
 
 frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallots': 'garlic', 'tarragon': 'cardamom',
                   'herbes de provence': 'garam masala', 'butter': 'mustard oil', 'olive oil': 'mustard oil',
-                  'fleur de sel': 'coriander'}
+                  'fleur de sel': 'coriander', 'duck': 'chicken', 'bread': 'naan', 'baguette': 'naan',
+                  'mustard': 'curry'}
 
 italianToChinese = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
                     'cheese': 'tofu', 'alfredo sauce': 'soy sauce', 'macaroni': 'lo mein noodles',
