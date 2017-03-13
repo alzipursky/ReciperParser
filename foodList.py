@@ -15,7 +15,7 @@ frenchToIndian = {'cheese': 'paneer', 'leeks': 'onions', 'shallots': 'garlic', '
 italianToChinese = {'pasta': 'lo mein noodles', 'spaghetti': 'lo mein noodles',
                     'cheese': 'tofu', 'alfredo sauce': 'soy sauce', 'macaroni': 'lo mein noodles',
                     'green bell pepper': 'bok choy', 'italian': 'chinese', 'bread': 'rice',
-                    'olive oil': 'vegetable oil',
+                    'olive oil': 'vegetable oil', 'tomato sauce': 'soy sauce',
                     'tomato': 'dried chilli peppers', 'lasagna': 'lo mein', 'parsley': 'ginger', 'bread crumbs': 'rice'}
 
 chineseToItalian = {'rice': 'pasta', 'vegetable oil': 'olive oil', 'soy sauce': 'tomato sauce',
